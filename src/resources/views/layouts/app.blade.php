@@ -23,7 +23,10 @@
             <li><a href="">マイページ</a></li>
         </ul>
     </nav>
-    <button type="submit">出品</button>
+    <form action="{{ route('items.sell') }}" method="get">
+        @csrf
+        <button type="submit">出品</button>
+    </form>
 </header>
 
 <main>
