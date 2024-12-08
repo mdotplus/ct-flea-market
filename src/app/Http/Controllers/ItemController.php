@@ -10,4 +10,9 @@ class ItemController extends Controller
     {
         return view('items.index');
     }
+
+    public function detail($item_id)
+    {
+        return view('items.detail', ['id' => $item_id]);
+    }
 }

@@ -15,3 +15,4 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', [ItemController::class, 'index'])->name('home');
+Route::get('/item/{item_id}', [ItemController::class, 'detail'])->name('items.detail');
