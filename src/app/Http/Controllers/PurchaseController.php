@@ -10,4 +10,14 @@ class PurchaseController extends Controller
     {
         return view('items.purchase', ['id' => $item_id]);
     }
+
+    public function change()
+    {
+        return view('items.address');
+    }
+
+    public function update($item_id)
+    {
+        return redirect()->route('items.purchase', ['item_id' => $item_id]);
+    }
 }

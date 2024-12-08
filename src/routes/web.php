@@ -20,4 +20,7 @@ Route::get('/item/{item_id}', [ItemController::class, 'detail'])->name('items.de
 
 Route::get('/purchase/{item_id}', [PurchaseController::class, 'buy'])->name('items.purchase');
 Route::get('/success', [ItemController::class, 'inde'])->name('items.success');
-Rtoute::get('/cancel', [ItemController::class, 'index'])->name('items.cancel');
+Route::get('/cancel', [ItemController::class, 'index'])->name('items.cancel');
+
+Route::get('/purchase/address/{item_id}', [PurchaseController::class, 'change'])->name('address.change');
+Route::post('/purchase/address/update/{item_id}', [PurchaseController::class, 'update'])->name('address.update');
