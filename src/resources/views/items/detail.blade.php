@@ -18,7 +18,10 @@
                 <span>1</span>
             </div>
         </div>
-        <button type="submit">購入手続きへ</button>
+        <form action="{{ route('items.purchase', ['item_id' => 1]) }}" method="get">
+            @csrf
+            <button type="submit">購入手続きへ</button>
+        </form>
 
         <div class="description">
             <span>商品説明<span>
