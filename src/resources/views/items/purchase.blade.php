@@ -32,7 +32,7 @@
             @error ('payment')
                 <div>{{ $message }}</div>
             @enderror
-            <a href="">変更する</a>
+            <a href="{{ route('address.change', ['item_id' => 1]) }}">変更する</a>
         </div>
 
         <table>
