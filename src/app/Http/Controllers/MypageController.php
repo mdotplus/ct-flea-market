@@ -11,8 +11,13 @@ class MypageController extends Controller
         return view('mypage.mypage');
     }
 
-    public function edit($user_id)
+    public function edit()
     {
         return view('mypage.profile');
+    }
+
+    public function update(Request $request)
+    {
+        return redirect()->route('mypage');
     }
 }

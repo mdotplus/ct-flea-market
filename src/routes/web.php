@@ -32,3 +32,4 @@ Route::post('/sell/create', [SellController::class, 'create'])->name('items.crea
 
 Route::get('/mypage', [MypageController::class, 'buy'])->name('mypage');
 Route::get('/mypage/profile', [MypageController::class, 'edit'])->name('mypage.edit');
+Route::post('/mypage/profile/update', [MypageController::class, 'update'])->name('mypage.update');
