@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\MypageController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\SellController;
 
@@ -28,3 +29,6 @@ Route::post('/purchase/address/update/{item_id}', [PurchaseController::class, 'u
 
 Route::get('/sell', [SellController::class, 'edit'])->name('items.sell');
 Route::post('/sell/create', [SellController::class, 'create'])->name('items.create');
+
+Route::get('/mypage', [MypageController::class, 'buy'])->name('mypage');
+Route::get('/mypage/profile', [MypageController::class, 'edit'])->name('mypage.edit');

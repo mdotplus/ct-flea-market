@@ -20,7 +20,7 @@
             @else
                 <li><a href="">ログイン</a></li>
             @endif
-            <li><a href="">マイページ</a></li>
+            <li><a href="{{ route('mypage') }}">マイページ</a></li>
         </ul>
     </nav>
     <form action="{{ route('items.sell') }}" method="get">
