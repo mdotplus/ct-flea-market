@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\SellController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('/cancel', [ItemController::class, 'index'])->name('items.cancel');
 
 Route::get('/purchase/address/{item_id}', [PurchaseController::class, 'change'])->name('address.change');
 Route::post('/purchase/address/update/{item_id}', [PurchaseController::class, 'update'])->name('address.update');
+
+Route::get('/sell', [SellController::class, 'edit'])->name('items.sell');
+Route::post('/sell/create', [SellController::class, 'create'])->name('items.create');
