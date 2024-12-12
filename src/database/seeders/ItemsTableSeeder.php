@@ -25,7 +25,6 @@ class ItemsTableSeeder extends Seeder
             'price' => 15000,
         ];
         DB::table('items')->insert($param);
-        // HDD	5,000	バイソン	家電	高速で信頼性の高いハードディスク	https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/HDD+Hard+Disk.jpg	目立った傷や汚れなし
         $param = [
             'user_id' => 1,
             'name' => 'HDD',
