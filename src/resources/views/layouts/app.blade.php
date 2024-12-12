@@ -16,9 +16,13 @@
     <nav>
         <ul>
             @if (Auth::check())
-                <li><a href="">ログアウト</a></li>
+                <li>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit">ログアウト</button>
+                </li>
             @else
-                <li><a href="">ログイン</a></li>
+                <li><a href="{{ route('login') }}">ログイン</a></li>
             @endif
             <li><a href="{{ route('mypage') }}">マイページ</a></li>
         </ul>
