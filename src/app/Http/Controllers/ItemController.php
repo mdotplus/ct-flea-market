@@ -10,8 +10,8 @@ class ItemController extends Controller
 {
     public function index()
     {
-        $itemsWithPurchaseStatus = itemService::getItemsWithPurchaseStatus();
-        $likes = Like::getLikesByUsers();
+        $itemsWithPurchaseStatus = ItemService::getItemsWithPurchaseStatus();
+        $likes = Like::getLikesByUser();
 
         return view('items.index', [
             'items' => $itemsWithPurchaseStatus,

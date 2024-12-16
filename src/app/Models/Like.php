@@ -9,7 +9,7 @@ class Like extends Model
 {
     use HasFactory;
 
-    public function getLikesByUsers()
+    public function getLikesByUser()
     {
         $likes = Like::all()->groupBy('user_id')->map(function ($group) {
             return $group->pluck('item_id');
