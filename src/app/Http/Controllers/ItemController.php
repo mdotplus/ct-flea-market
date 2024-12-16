@@ -10,7 +10,7 @@ class ItemController extends Controller
 {
     public function index()
     {
-        $itemsWithPurchaseStatus = (new ItemService())->getItemsWithPurchaseStatus();
+        $itemsWithPurchaseStatus = itemService::getItemsWithPurchaseStatus();
         $likes = Like::getLikesByUsers();
 
         return view('items.index', [
