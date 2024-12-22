@@ -8,12 +8,15 @@ use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $tab = $request->query('tab', 'recommend');
+
         $itemsWithPurchaseStatus = ItemService::getItemsWithPurchaseStatus();
         $likes = Like::getLikesByUser();
 
         return view('items.index', [
+            'tab' => $tab,
             'items' => $itemsWithPurchaseStatus,
             'likes' => $likes,
         ]);
